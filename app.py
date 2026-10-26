@@ -34,52 +34,75 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
+/* Global Font & Background */
 html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
+    color: #1e293b;
+}
+.stApp {
+    background-color: #f8fafc;
 }
 
 /* The Hero Banner */
 .hero {
-    padding: 2rem 2rem; 
-    border-radius: 20px; 
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); 
+    padding: 3rem 2rem; 
+    border-radius: 24px; 
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f766e 100%); 
     color: white; 
     margin-bottom: 2rem;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+/* Add a subtle glowing orb to the hero */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(96,165,250,0.4) 0%, rgba(0,0,0,0) 70%);
+    border-radius: 50%;
 }
 .hero h1 {
     color: white; 
     font-weight: 800;
-    font-size: 2.8rem; 
+    font-size: 3rem; 
     margin: 0;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 .hero p {
     color: #93c5fd; 
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-top: 0.5rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 .kicker {
     text-transform: uppercase; 
     letter-spacing: 0.15em; 
-    font-size: 0.8rem; 
-    font-weight: 700; 
-    color: #60a5fa;
+    font-size: 0.85rem; 
+    font-weight: 800; 
+    color: #2dd4bf;
 }
 
 /* Make Metrics Pop */
 div[data-testid="stMetricValue"] {
-    color: #1e3a8a !important;
+    color: #0f172a !important;
     font-weight: 800 !important;
-    font-size: 2.2rem !important;
+    font-size: 2.8rem !important;
 }
 div[data-testid="stMetric"] {
-    background-color: #f8fafc;
-    padding: 1rem;
-    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 1.5rem !important;
+    border-radius: 16px;
     border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease-in-out;
+}
+div[data-testid="stMetric"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 /* Clean up the Section Cards */
@@ -91,10 +114,25 @@ div[data-testid="stMetric"] {
     background-color: #ffffff;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
+.section-card h2 {
+    color: #0f172a;
+}
+
+/* Better Alerts */
+div[data-testid="stAlert"] {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 .small-note { font-size: 0.85rem; color: #64748b; margin-top: 10px; }
+
+/* Style the Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+}
 </style>
 """, unsafe_allow_html=True)
-
 # 4. Sidebar Navigation
 with st.sidebar:
     st.markdown("## 🇷🇼 UbukunguLens")
