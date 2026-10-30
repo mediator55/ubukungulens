@@ -219,13 +219,9 @@ External statistical sources and relevant references are acknowledged in this re
 The development team acknowledges the National Institute of Statistics of Rwanda (NISR) for publishing the statistical resources that inform this project and for organizing the NISR Big Data Hackathon 2026.
 
 
-<<<<<<< HEAD
-=======
 Project: UbukunguLens – Rwanda's Financial Inclusion & Usage Explorer
 Competition: NISR Big Data Hackathon 2026
 Track: Financial Inclusion & Poverty Reduction
 Developed by: Fidele Nsengiyaremye and Aime Dominique UWASE
 Institution: University of Kigali
 Transforming published statistics into accessible insights for a better understanding of financial inclusion in Rwanda.
->>>>>>> 901543488b347dea6848063f9decb888ebc67bf1
-
