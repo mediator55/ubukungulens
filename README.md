@@ -38,13 +38,6 @@ streamlit run app.py
 4. Record a screen demonstration no longer than 3 minutes.
 5. Submit the public GitHub link, live app link, and documentation as required by NISR.
 
-## Suggested 2:30 demo outline
-- 0:00–0:20 — Problem and intended users.
-- 0:20–0:55 — Executive overview and gender gap.
-- 0:55–1:25 — Filter indicators and inspect definitions/source links.
-- 1:25–1:50 — Action planner; explicitly explain it is illustrative.
-- 1:50–2:20 — Methodology, source transparency, and limitations.
-- 2:20–2:30 — Intended next step: authorized microdata analysis.
 
 ## Method limitations
 - The percentages are published aggregates, not newly computed microdata estimates.
